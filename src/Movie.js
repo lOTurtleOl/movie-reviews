@@ -11,6 +11,7 @@ export default class Movie extends React.Component {
     render() {
         return(
             <p>{this.state.movie}</p>
+            
         )
     }
 }
