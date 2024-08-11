@@ -1,13 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Stars from './Stars';
+import MovieList from './MovieList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Stars name="Star Rating"/>
-      </header>
+    <div>
+      <h1>Movie Reviews</h1>
+      <MovieList />
     </div>
   );
 }
