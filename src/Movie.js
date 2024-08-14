@@ -1,9 +1,25 @@
 import React from 'react';
 import Stars from './Stars';
-import MovieList from './MovieList';
 import "./App.css";
+import ReviewList from './ReviewList';
+import ReviewForm from './ReviewForm';
 
 export default class Movie extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            reviews: [] // Array to store reviews
+        };
+        this.addReview = this.addReview.bind(this);
+    }
+
+    // Function to add a review
+    addReview(newReview) {
+        this.setState(state => ({
+            reviews: [...state.reviews, newReview]
+        }));
+    }
+    
     render() {
         const {movie} = this.props;
 
@@ -16,7 +32,12 @@ export default class Movie extends React.Component {
                     <p className="card-text">{movie.synopsis}</p>
                     <Stars name="Star Rating"/>
                 </div>
-                <div className="container text-center">
+                <ReviewForm addReview={this.addReview} />
+                <ReviewList reviews={this.state.reviews} />
+                
+                
+                
+                {/* <div className="container text-center">
                     <div className="row">
                         <div className="col">
                             <h1>Review List</h1>
@@ -31,10 +52,10 @@ export default class Movie extends React.Component {
                 </div>
                 <div className="card-footer w-100">
                     <h1>Review Form</h1>
-                </div>
+                </div> */}
                 </div>
             </div>
             
-        )
+        );
     }
 }

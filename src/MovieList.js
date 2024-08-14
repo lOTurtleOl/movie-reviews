@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import Movie from './Movie';
 import avatarImg from './images/avatar-img.jpg';
 import antManImg from './images/ant-man-img.jpg';
