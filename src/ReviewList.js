@@ -5,6 +5,7 @@ import Review from './Review';
 export default function ReviewList(props) {
     const {reviews } = props;
 
+    // map over the reviews array and create Review components to display
     return (
         <div className="container text-center mt-3">
             <h4 className="text-center">Reviews:</h4>
@@ -16,33 +17,3 @@ export default function ReviewList(props) {
         </div>
     );
 }
-
-
-
-
-
-
-
-// export default class ReviewList extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         let reviews = this.reviews;
-//     }
-//     render() {
-//         return(
-//             <div className="container text-center">
-//                     <div className="row">
-//                         <div className="col">
-//                             <Review />
-//                         </div>
-//                         <div className="col">
-//                             <Review />
-//                         </div>
-//                         <div className="col">
-//                             <Review />
-//                         </div>
-//                     </div>                    
-//                 </div>
-//         )
-//     }
-// }

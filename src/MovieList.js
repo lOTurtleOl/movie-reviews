@@ -4,6 +4,7 @@ import avatarImg from './images/avatar-img.jpg';
 import antManImg from './images/ant-man-img.jpg';
 import shrekImg from './images/shrek-img.png';
 
+//class that holds array of movies in state
 export default class MovieList extends React.Component {
     constructor(props) {
         super(props)
@@ -30,6 +31,7 @@ export default class MovieList extends React.Component {
             ]
         };
     }
+    // go through array and for each movie in movies, create a new Movie component with the id as a key and pass the movie object to it as props
     render() {
         return (
             <div>

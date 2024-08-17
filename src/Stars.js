@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
 import starImg from './images/star-img.jpg';
 
+// set state of name and stars
 export default class Stars extends React.Component {
     constructor(props) {
         super(props);
@@ -12,10 +12,12 @@ export default class Stars extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+    // on click, if state.stars is less than 5, add 1. Else set stars to 0
     handleClick() {
         this.setState(this.state.stars < 5 ? state => ({stars: state.stars + 1}): state => ({stars: state.stars = 0}));
     }
 
+    // return star container for review
     render() {
         return(
             <div>

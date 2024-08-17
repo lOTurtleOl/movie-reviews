@@ -2,6 +2,7 @@ import React from 'react';
 import Review from './Review';
 import ReviewList from './ReviewList';
 
+// empty array to hold newReview
 export default class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
@@ -12,10 +13,12 @@ export default class ReviewForm extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
+    // method that sets the state of the newReview variable to the value as it's updated
     handleInputChange(event) {
         this.setState({newReview: event.target.value});
     }
 
+    // method to prevent default submission, use addReview attribute function to add the new review
     handleSubmit(event) {
         event.preventDefault();
         if (this.state.newReview.trim()) {
@@ -24,6 +27,7 @@ export default class ReviewForm extends React.Component {
         }
     }
 
+    // return reviewForm html
     render() {
         return(
             <form onSubmit={this.handleSubmit}>

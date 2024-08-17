@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import MovieList from './MovieList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// call in MovieList component and initialize project
 function App() {
   return (
     <div>
